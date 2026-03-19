@@ -10,9 +10,9 @@
     
     <header class="header">
         <div class="container header__container">
-            <div class="header__logo">
-                LOGO
-            </div>
+            <a href="#" class="header__logo">
+                <img src="resources/logo.png" alt="Logo Pop It">
+            </a>
 
             <button class="header__burger" id="burgerBtn">
                 ☰
@@ -24,10 +24,10 @@
                         <a href="#" class="header__link">INICIO</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">NOSOTROS</a>
+                        <a href="#nosotros" class="header__link">NOSOTROS</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">CONTACTO</a>
+                        <a href="#productos" class="header__link">PRODUCTOS</a>
                     </li>
                 </ul>
             </nav>
@@ -48,7 +48,7 @@
                 <p class="hero__text">
                      diviertete jugando con burbujas!
                 </p>
-                <button class="hero__button">
+                <button class="hero__button open-modal">
                     Contáctanos
                 </button>
             </div>
@@ -56,7 +56,7 @@
         </div>
     </section>
 
-    <section class="about reveal">
+    <section id="nosotros" class="about reveal">
         <div class="container about__container">
             <h2 class="about__title">
                 ¿Quienes somos?
@@ -69,7 +69,7 @@
     </section>
 
 
-    <section class="products reveal">
+    <section id="productos" class="products reveal">
         <div class="container">
             <h2 class="products__title">
                 Nuestros productos!
@@ -80,7 +80,7 @@
                     <p class="product-card__title">
                         Tableta de burbujas
                     </p>
-                    <button class="product-card__button">
+                    <button class="product-card__button open-modal">
                         Comprar
                     </button>
                 </div>
@@ -90,7 +90,7 @@
                     <p class="product-card__title">
                         Among Us, burbujas
                     </p>
-                    <button class="product-card__button">
+                    <button class="product-card__button open-modal">
                         Comprar
                     </button>
                 </div>
@@ -100,7 +100,7 @@
                     <p class="product-card__title">
                         Burbujas circular
                     </p>
-                    <button class="product-card__button">
+                    <button class="product-card__button open-modal">
                         Comprar
                     </button>
                 </div>
@@ -129,17 +129,57 @@
 
     <footer class="footer reveal">
         <div class="container footer__container">
-            <p class="footer__logo">
-                LOGO
-            </p>
+            <a href="#" class="footer__logo">
+                <img src="resources/logo.png" alt="Logo Pop It">
+            </a>
             <ul class="footer__menu">
-                <li>Inicio</li>
-                <li>Nosotros</li>
-                <li>Contacto</li>
-                <li>Redes</li>
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="#nosotros">Nosotros</a>
+                </li>
+                <li>
+                    <a href="#productos">Productos</a>
+                </li>
             </ul>
         </div>
     </footer>
+
+
+
+
+    <div class="modal" id="contactModal">
+        <div class="modal__overlay" id="modalOverlay"></div>
+
+        <div class="modal__content">
+            <button class="modal__close" id="closeModal">&times;</button>
+
+            <div class="modal__body">
+                <div class="modal__image">
+                    <img src="resources/square.png" alt="Producto Pop It">
+                </div>
+
+                <div class="modal__info">
+                    <h2 class="modal__title">Contactanos pa comprar</h2>
+                    <p class="modal__text">
+                        Compra tu pop it desde el siguiente numero, te esperamos.
+                    </p>
+                    <p class="modal__text">
+                        <strong>Telefono:</strong> +593 96 999 9999
+                    </p>
+
+                    <div class="modal__actions">
+                        <a href="https://wa.me/593999999999" target="_blank" class="modal__button">
+                            Escribenos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
 
